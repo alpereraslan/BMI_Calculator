@@ -22,6 +22,11 @@ weightEntry.pack()
 resultLabel = None
 
 def bmi_calculation():
+    global resultLabel
+    
+    if resultLabel:
+        resultLabel.destroy()
+    
     try:
         x = int(weightEntry.get())
         y = int(heightEntry.get())
